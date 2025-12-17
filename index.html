@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frame</title>
+  <meta name="description" content="Get rewarded for watching what you already scroll past." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#565656;
+      --line:#eaeaea;
+      --card:#ffffff;
+      --max: 780px;
+      --radius: 16px;
+    }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:56px 20px 44px;
+    }
+    header{
+      padding-bottom:26px;
+      border-bottom:1px solid var(--line);
+    }
+    h1{
+      margin:0 0 14px;
+      font-size:48px;
+      line-height:1.05;
+      letter-spacing:-0.03em;
+    }
+    .tagline{
+      margin:0 0 14px;
+      font-size:20px;
+    }
+    .hero-lines{
+      margin:0;
+      font-size:18px;
+      color:var(--muted);
+    }
+    .hero-lines strong{ color:var(--text); font-weight:650; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:22px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      transition:transform .08s ease, background .2s ease;
+    }
+    .btn:hover{ background:#fafafa; }
+    .btn:active{ transform:translateY(1px); }
+    .btn svg{ width:16px; height:16px; }
+
+    main{ padding-top:24px; }
+    section{ padding:18px 0; }
+    h2{
+      margin:0 0 10px;
+      font-size:22px;
+      letter-spacing:-0.01em;
+    }
+    p{ margin:0 0 10px; color:var(--text); }
+    .muted{ color:var(--muted); }
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{ margin:8px 0; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      padding:14px 14px 10px;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--muted);
+      font-weight:650;
+    }
+
+    footer{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .social{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+    }
+    .pill:hover{ background:#fafafa; }
+
+    @media (min-width: 760px){
+      .grid{ grid-template-columns:1fr 1fr; }
+      h1{ font-size:56px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Frame</h1>
+      <p class="tagline">Get rewarded for watching what you already scroll past.</p>
+
+      <p class="hero-lines">
+        <strong>Watch curated brand films.</strong><br/>
+        <strong>Earn real perks.</strong><br/>
+        <strong>Take control of your attention.</strong>
+      </p>
+
+      <a class="btn" href="#learn-more" aria-label="Learn more">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M7 13l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Learn More
+      </a>
+    </header>
+
+    <main id="learn-more">
+      <section>
+        <h2>What is this?</h2>
+        <p>
+          We’re building an opt-in platform where you intentionally watch curated brand videos and receive real rewards in return.
+        </p>
+        <p class="muted">
+          No infinite scroll.<br/>
+          No hidden algorithms.<br/>
+          Just conscious attention.
+        </p>
+      </section>
+
+      <section>
+        <h2>How it works?</h2>
+        <ul>
+          <li>Join a short, 10-minute session</li>
+          <li>Watch 3–5 creative brand films</li>
+          <li>Receive perks like discounts, early access, or raffle entries</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why are we different?</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>For you:</h3>
+            <ul>
+              <li>You choose when to watch</li>
+              <li>You know how your time is monetized</li>
+              <li>You get something real in return</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>For brands:</h3>
+            <ul>
+              <li>Verified, opt-in attention</li>
+              <li>Higher recall and trust</li>
+              <li>A space for creativity — not noise</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social" aria-label="Social links">
+        <!-- Replace the # links with your real profiles -->
+        <a class="pill" href="#" target="_blank" rel="noopener">X</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill" href="#" target="_blank" rel="noopener">TikTok</a>
+        <a class="pill" href="mailto:you@example.com">Email</a>
+      </div>
+
+      <small class="muted">© <span id="y"></span> Frame</small>
+    </footer>
+  </div>
+
+  <script>
+    // set footer year automatically
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
