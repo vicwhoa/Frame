@@ -203,53 +203,34 @@
 
       <!-- WAITLIST FORM -->
       <section id="waitlist">
-        <h2>Early access waitlist</h2>
-        <p class="muted">
-          We’re starting small with invite-only sessions. Leave your email and we’ll reach out.
-        </p>
+  <h2>Early access waitlist</h2>
+  <p class="muted">
+    We’re starting small with invite-only sessions. Leave your email and we’ll reach out.
+  </p>
 
-        <form
-          action="https://formspree.io/f/xaqwweqz"
-          method="POST"
-          style="margin-top:14px; max-width:420px;"
-        >
-          <label style="display:block; margin-bottom:12px;">
-            <span class="muted" style="font-size:14px;">Email</span>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@example.com"
-              style="width:100%; padding:12px; border:1px solid var(--line); border-radius:12px;"
-            />
-          </label>
+  <form class="form" action="https://formspree.io/f/xaqwweqz" method="POST">
+    <div class="field">
+      <div class="label">Email</div>
+      <input class="input" type="email" name="email" required placeholder="you@example.com" />
+    </div>
 
-          <label style="display:block; margin-bottom:12px;">
-            <span class="muted" style="font-size:14px;">What made you curious? (optional)</span>
-            <textarea
-              name="message"
-              rows="3"
-              placeholder="I like the idea of conscious attention + rewards."
-              style="width:100%; padding:12px; border:1px solid var(--line); border-radius:12px; resize:vertical;"
-            ></textarea>
-          </label>
+    <div class="field">
+      <div class="label">What made you curious? (optional)</div>
+      <textarea class="textarea" name="message" rows="3" placeholder="I like the idea of conscious attention + rewards."></textarea>
+    </div>
 
-          <!-- Spam protection -->
-          <input type="text" name="_gotcha" style="display:none">
+    <!-- Spam protection -->
+    <input type="text" name="_gotcha" style="display:none">
 
-          <!-- Email subject -->
-          <input type="hidden" name="_subject" value="New Frame waitlist signup">
+    <!-- Email subject -->
+    <input type="hidden" name="_subject" value="New Frame waitlist signup">
 
-          <button type="submit" class="btn">
-            Join the waitlist
-          </button>
-
-          <p class="muted" style="font-size:12px; margin-top:8px;">
-            No spam. Just early access.
-          </p>
-        </form>
-      </section>
-    </main>
+    <div class="submitRow">
+      <button type="submit" class="btn">Join the waitlist</button>
+      <span class="fineprint">No spam. Just early access.</span>
+    </div>
+  </form>
+</section>
 
     <footer>
       <div class="social">
